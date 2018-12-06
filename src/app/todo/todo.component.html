@@ -1,0 +1,10 @@
+<div>
+  <label>
+    <input (change)="this.handleChange($event)" placeholder="name">
+  </label>
+  <ol>
+    <li *ngFor='let todo of todos; let i = index'>
+      <div (click)='this.handleDelete(todo.name)'> {{todo.name}}</div>
+    </li>
+  </ol>
+</div>
