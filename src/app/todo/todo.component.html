@@ -1,10 +1,17 @@
 <div>
   <label>
-    <input (change)="this.handleChange($event)" placeholder="name">
+    <input (change)="newTodo($event)" placeholder="name">
   </label>
-  <ol>
-    <li *ngFor='let todo of todos; let i = index'>
-      <div (click)='this.handleDelete(todo.name)'> {{todo.name}}</div>
+  <ol class="overflowed">
+    <li *ngFor="let todo of todos; let i = index" (click)='onSelect(i)'>
+      <div class="todoItem">
+        <div class="itemName">{{todo}}</div>
+        <div class="buttonContainer" *ngIf="selectedTodo === i">
+          <button (click)="onRename(todo)" class="editButtonStyle">R</button>
+          <button (click)="handleDelete(todo)" class="deleteButtonStyle">X</button>
+          <input *ngIf="renameOn === todo" type="text" (change)="this.handleChangeTodo($event, todo)"/>
+        </div>
+      </div>
     </li>
   </ol>
 </div>

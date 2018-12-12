@@ -1,0 +1,12 @@
+.formLoginStyle {
+    height: 3em;
+    width: 95%;
+    margin: .5em;
+}
+
+.formLoginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+}

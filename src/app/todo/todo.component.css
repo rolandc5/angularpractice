@@ -2,6 +2,8 @@ ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    height: 15em;
 }
 
 li {
@@ -13,6 +15,41 @@ li:hover {
     border: solid gray;
 }
 
+li:active {
+    border: solid gray;
+}
+
 div {
     font-size: 30px;
+}
+
+.todoItem {
+    padding: 1em;
+}
+
+.itemName {
+    padding: .1em;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.editButtonStyle {
+    border: none;
+    background-color: green;
+    width: 2em;
+    height: 2em;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.deleteButtonStyle {
+    border: none;
+    background-color: red;
+    width: 2em;
+    height: 2em;
+    border-radius: 10px;
+    margin: 0;
 }

@@ -1,0 +1,5 @@
+<form class="formLoginContainer">
+  <input class="formLoginStyle" type="text" placeholder="username" name="username" (change)="onChangeForm($event)">
+  <input class="formLoginStyle" type="text" placeholder="password" name="password" (change)="onChangeForm($event)">
+  <button (click)="onLogin(user.username, user.password)">Login</button>
+</form>

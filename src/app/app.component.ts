@@ -8,7 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Todo list'
+  login = true;
+
+  ngOnInit() {
+    !localStorage.getItem("username") ? this.login = true : this.login = false;
+  }
+
   onPress(e) {
     window.location.href='/home'
+  }
+
+  onClearLocal() {
+    localStorage.clear();
+    window.location.href="/";
   }
 }
