@@ -39,6 +39,7 @@ export class TodoComponent implements OnInit {
   }
 
   onRename = (e) => {
+    console.log(e);
     return this.renameOn === '' ? this.renameOn = e: this.renameOn = '';
   }
 
